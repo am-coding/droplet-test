@@ -8,7 +8,7 @@ app.get("/", function (req, res) {
   puppeteer
     .launch({
       ignoreDefaultArgs: ["--disable-extensions"],
-      args: ["--no-sandbox"],
+      args: ["--no-sandbox", "--disable-gpu"],
       headless: false,
     })
     .then(async function (browser) {
