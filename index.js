@@ -10,6 +10,7 @@ app.get("/", function (req, res) {
       ignoreDefaultArgs: ["--disable-extensions"],
       args: ["--no-sandbox", "--disable-gpu"],
       headless: false,
+      executablePath: "/usr/bin/chromium-browser",
     })
     .then(async function (browser) {
       const page = await browser.newPage();
